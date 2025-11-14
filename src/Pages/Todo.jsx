@@ -1,8 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BiSolidPencil } from 'react-icons/bi';
 import { BsTrash } from 'react-icons/bs';
+import 'aos/dist/aos.css'
+import Aos from 'aos';
+
 
 const Todo = () => {
+   useEffect(() => {
+        Aos.init({
+            duration: 1,
+        });
+    }, []);
+
   const [tasks, setTasks] = useState([]);
   const [taskName, setTaskName] = useState("");
   const [editingTask, setEditingTask] = useState(null);
@@ -34,10 +43,10 @@ const Todo = () => {
 
   return (
     <>
-      <h1 className="p-3 text-center font-bold text-2xl text-[#0A174E]">
+      <h1 className="p-3 text-center font-bold text-2xl text-[#0A174E]" data-aos="zoom-in">
         THIS IS TODO LIST PAGE
       </h1>
-      <div className="flex flex-col justify-normal gap-4 m-auto mt-10 p-7 bg-[#0A174E] w-fit ">
+      <div className="flex flex-col justify-normal gap-4 m-auto mt-10 p-7 bg-[#0A174E] w-fit" data-aos="fade-up">
         <div className="flex justify-normal gap-4">
           <input
             type="text"

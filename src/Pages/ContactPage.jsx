@@ -1,6 +1,15 @@
-import React, { useState } from 'react'
+import Aos from 'aos';
+import React, { useEffect, useState } from 'react'
+import 'aos/dist/aos.css'
+
 
 const ContactPage = () => {
+     useEffect(() => {
+            Aos.init({
+                duration: 1000,
+            });
+        }, []);
+
   const [form,setForm] = useState({
         username: '',
         email: '',
@@ -45,7 +54,7 @@ const ContactPage = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="flex flex-col w-[30%] mx-[auto] mt-9 space-y-5 bg-[#0A174E] rounded-md p-5 ">
+      <form onSubmit={handleSubmit} className="flex flex-col w-[100%] max-w-[500px] mx-[auto] mt-9 space-y-5 bg-[#0A174E] rounded-md p-5 " data-aos="fade-up">
         <div className="flex flex-col">
             <label className='text-[#F5D042]'>Username </label>
             <input type="text" name='username' value={form.username} onChange={handleChange} className="border border-black rounded-md p-1 ml-2" />
