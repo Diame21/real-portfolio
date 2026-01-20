@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <div>
             <nav className='w-full bg-[#0A174E] sticky py-0 shadow border-b-2 border-black'>
-                <div className="max-w-screen-xl flex flex-nowrap items-center  justify-between mx-auto p-4">
+                <div className="max-w-screen-xl flex flex-nowrap items-center  justify-between gap-2 mx-auto p-4">
                     <a href="https://react.dev" className="flex items-center gap-2">
                         <img src={mylogo} className="h-9 rounded-lg" alt="Flowbite Logo" />
                         <span className="self-center text-[#F5D042] text-2xl font-semibold whitespace-nowrap">Diame's Portfolio</span>
